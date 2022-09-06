@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    background: url(/Assets/background.jpg);
+    background-attachment: fixed;
+    background-size:cover
+    
+}
+
+#home {
+    width: auto;
+    height: 100vh;
+    background: url(/Assets/home.jpg);
+    background-size: cover;
+    scroll-snap-align: start;
+
+}
+
+
+
+.arrow-pulse-down:after {
+	content: "🡣"; /* Here you can change the style of the arrow */
+	position: absolute;
+	width: 35px; height: 35px;
+	margin: 0 auto;
+	left: 0; right: 0;
+	font-size: 35px;
+    color: white;
+	animation: arrow-pulse-down 700ms linear infinite;
+}
+	@keyframes arrow-pulse-down {
+		0% {
+			bottom: 40px;
+			opacity: 0;
+		}
+		25% {
+			opacity: .25;
+		}
+		50% {
+			opacity: .5;
+		}
+		75% {
+			opacity: .75;
+		}
+		100% {
+			bottom: 20px;
+			opacity: 1;
+		}
+	}
+
+
+
+a {
+    text-decoration: none;
+    color: #adadad;
+}
+
+#header {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(31, 31, 31);
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Sticky */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+
+#link {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#name h2 {
+    margin-bottom: 0px;
+    animation: apparition .8s ease-out;
+    color: #adadad;
+}
+#name h5 {
+    color: #adadad;
+    animation: apparition 2s ease-out;
+
+}
+#name {
+    display: flex;
+}
+#name img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+#presentation {
+    width: 350px;
+    position: relative;
+    left: 70em;
+    top: 13em;
+}
+
+#presLogo {
+    display: flex;
+}
+#presLogo img {
+    width: 30px;
+    margin-right: 10px;
+}
+#presTexte {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#about {
+    width: auto;
+    height: 110vh;
+    /* background-color: #ff65be; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* scroll-padding-bottom: 0; */
+    scroll-snap-align: start;
+}
+
+#work {
+    width: auto;
+    height: 110vh;
+    /* background-color: #dac807; */
+    /* background: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* scroll-padding-bottom: 0; */
+    scroll-snap-align: start;
+
+
+
+}
+#contact {
+    width: auto;
+    height: 110vh;
+    /* background-color: #06b8ba; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* scroll-padding-bottom: 0; */
+    scroll-snap-align: start;
+
+}
+
+#footer {
+    /* padding-top: 20px; */
+    position: relative;
+    bottom: -30px;
+}
+#footer a {
+    color: rgb(21, 3, 70);
+}
+
+
+
+
+#cardAbout{
+    width: 90vw;
+    height: 80vh;
+    border-radius: 50px;
+    background: url(/Assets/about.jpg);
+    background-size: cover;
+    border: 2px solid black;
+    -webkit-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+
+}
+#cardWork{
+    width: 90vw;
+    height: 80vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/Assets/reals5.jpg);
+    background-size: cover;
+    /* background-color: rgb(31, 31, 31); */
+    -webkit-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 15px 15px 5px 0px rgba(0,0,0,0.5);
+}
+#cardContact{
+    width: 90vw;
+    height: 80vh;
+    /* border-radius: 50px;
+    background-image: url(/Assets/jean.jpg);
+    background-size: cover;
+    background-color: #feed01;*/
+    /* border: 2px solid black;  */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm {
+    color: #fff;
+    font-family:Catamaran,sans-serif;
+    font-size:3em;
+
+}
+#nameForm {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 60px;
+
+}
+#emailForm {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+#messForm {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+#btn {
+    width: 40%;
+    background: url(/Assets/laine.jpg) no-repeat center center;
+    background-size: cover;
+    color: rgb(34, 34, 34);
+    font-size:large;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
+@keyframes apparition {
+    from{
+        opacity: 0;
+        transform:translateY(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* @keyframes pulse {
+    
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,109,74,.7);
+    }
+    40% {
+        box-shadow: 0 0 0 50px rgba(255,109,74,0);
+    }
+    80% {
+        box-shadow: 0 0 0 50px rgba(255,109,74,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,109,74,0);
+    }
+} */
+
+
+.container {
+    max-width: 800px;
+    margin: 0, auto;
+    padding: 50px;
+}
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+
+img.active {
+    display: block;
+    animation: fade 0.8s ;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cont-btn {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+}
+
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
